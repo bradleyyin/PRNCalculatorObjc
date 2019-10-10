@@ -13,9 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BYStack : NSObject
 
 - (instancetype)initWithArray:(NSArray *)array;
+@property int count;
 - (void)push:(NSNumber *)value;
 - (NSNumber *)pop;
 - (NSNumber *)peek;
+- (void)clear;
 
 @end
 

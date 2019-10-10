@@ -41,4 +41,12 @@
     return _values.lastObject;
 }
 
+- (void)clear {
+    [self.values removeAllObjects];
+}
+
+- (int)count {
+    return [self.values count];
+}
+
 @end
