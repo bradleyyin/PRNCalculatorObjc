@@ -1,2 +1,2 @@
-# PRNCalculatorObjc
-PRN Calculator in objective-C
+# RPNCalculatorObjc
+RPN Calculator in objective-C
