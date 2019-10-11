@@ -10,7 +10,7 @@
 
 @interface BYDigitAccumulator()
 
-@property NSMutableArray *digits;
+@property NSMutableString *digits;
 
 @end
 
@@ -19,32 +19,37 @@
 {
     self = [super init];
     if (self) {
-        _digits = [NSMutableArray arrayWithArray:@[]];
+        _digits = [[NSMutableString alloc] init];
     }
     return self;
 }
 
+- (NSString *)stringValue {
+    return [NSString stringWithFormat:@"%@", self.digits];
+}
+
 - (double)value {
-    NSString *numberAsString = [self.digits componentsJoinedByString:@""];
-    return [numberAsString doubleValue];
+    return [self.digits doubleValue];
 }
 
 - (void)addDecimalPoint {
-    if ([self.digits containsObject:@"."]) {
+    if ([self.digits containsString:@"."]) {
         NSLog(@"Try to add more than one decimal point");
     } else {
-        [self.digits addObject:@"."];
+        [self.digits appendString:@"."];
     }
 }
 
-- (void)addDigitWithNumericValue:(NSInteger)number {
-    NSNumber *digit = [NSNumber numberWithInteger:number];
-    NSString *digitString = digit.stringValue;
-    [self.digits addObject:digitString];
+- (void)addDigitWithNumericValue:(int)number {
+    if (number > 9 && number < 0) {
+        return;
+    }
+
+    [self.digits appendFormat:@"%i", number];
 }
 
 - (void)clear {
-    [self.digits removeAllObjects];
+    self.digits = [@"" mutableCopy];
 }
 
 @end

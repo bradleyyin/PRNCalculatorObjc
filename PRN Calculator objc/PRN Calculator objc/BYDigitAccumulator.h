@@ -12,10 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BYDigitAccumulator : NSObject
 
-- (void)addDigitWithNumericValue:(NSInteger)number;
+- (void)addDigitWithNumericValue:(int)number;
 - (void)addDecimalPoint;
 - (void)clear;
 @property (readonly) double value;
+@property (readonly) NSString* stringValue;
 
 
 @end

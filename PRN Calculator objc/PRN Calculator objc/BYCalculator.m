@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        _stack = [[BYStack alloc] init];
+        _stack = [[BYStack alloc] initWithArray:@[]];
     }
     return self;
 }
@@ -28,11 +28,15 @@
 - (void)pushNumber:(double)value{
     NSNumber *number = [NSNumber numberWithDouble:value];
     [self.stack push:number];
+    NSLog(@"stack: %lu", [_stack count]);
 }
 - (void)applyOperator:(BYOperator)operator {
-    NSNumber *rhsOperand = [self.stack pop];
-    NSNumber *lhsOperand = [self.stack pop];
-    if ([self.stack count] >= 2 && rhsOperand && lhsOperand) {
+    
+    if ([self.stack count] >= 2) {
+        
+        NSNumber *rhsOperand = [self.stack pop];
+        NSNumber *lhsOperand = [self.stack pop];
+        
         double result = 0.0;
         switch (operator) {
             case add:

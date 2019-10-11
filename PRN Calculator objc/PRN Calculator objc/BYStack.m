@@ -23,14 +23,18 @@
     return self;
 }
 
+- (NSUInteger)count {
+    return [self.values count];
+}
+
 - (void)push:(NSNumber *)value {
-    [_values addObject:value];
+    [self.values addObject:value];
 }
 
 - (NSNumber *)pop {
     if (_values.count > 0) {
-        NSNumber *lastNumber = _values.lastObject;
-        [_values removeLastObject];
+        NSNumber *lastNumber = [self.values lastObject];
+        [self.values removeLastObject];
         return lastNumber;
     } else {
         return nil;
@@ -38,15 +42,11 @@
 }
 
 - (NSNumber *)peek {
-    return _values.lastObject;
+    return [self.values lastObject];
 }
 
 - (void)clear {
     [self.values removeAllObjects];
-}
-
-- (int)count {
-    return [self.values count];
 }
 
 @end
