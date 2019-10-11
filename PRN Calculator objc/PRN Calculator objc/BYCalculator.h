@@ -15,17 +15,17 @@ NS_ASSUME_NONNULL_BEGIN
 //
 //};
 
-typedef NS_ENUM(char, Operator) {
+typedef NS_ENUM(NSInteger, BYOperator) {
     add,
     subtract,
     multiply,
     divide,
 };
 
-@property (nonatomic) NSNumber *topValue;
+@property (readonly) double topValue;
 
 - (void)pushNumber:(double)value;
-- (void)applyOperator:(Operator)operator;
+- (void)applyOperator:(BYOperator)operator;
 - (void)clear;
 
 @end

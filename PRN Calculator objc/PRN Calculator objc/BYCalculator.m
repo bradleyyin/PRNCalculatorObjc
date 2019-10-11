@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        
+        _stack = [[BYStack alloc] init];
     }
     return self;
 }
@@ -29,7 +29,7 @@
     NSNumber *number = [NSNumber numberWithDouble:value];
     [self.stack push:number];
 }
-- (void)applyOperator:(Operator)operator {
+- (void)applyOperator:(BYOperator)operator {
     NSNumber *rhsOperand = [self.stack pop];
     NSNumber *lhsOperand = [self.stack pop];
     if ([self.stack count] >= 2 && rhsOperand && lhsOperand) {
@@ -57,8 +57,8 @@
 - (void)clear {
     [self.stack clear];
 }
-- (NSNumber *)topValue {
-    return [self.stack peek];
+- (double)topValue {
+    return [[self.stack peek] doubleValue];
 }
 
 @end

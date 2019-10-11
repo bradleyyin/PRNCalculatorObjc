@@ -16,6 +16,7 @@
 		75F2FB1C234FC61E006007D8 /* BYCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB1B234FC61E006007D8 /* BYCalculatorViewController.m */; };
 		75F2FB1F234FC651006007D8 /* BYStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB1E234FC651006007D8 /* BYStack.m */; };
 		75F2FB22234FC922006007D8 /* BYCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB21234FC922006007D8 /* BYCalculator.m */; };
+		75F2FB25234FF5F4006007D8 /* BYDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F2FB24234FF5F4006007D8 /* BYDigitAccumulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		75F2FB1E234FC651006007D8 /* BYStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYStack.m; sourceTree = "<group>"; };
 		75F2FB20234FC922006007D8 /* BYCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYCalculator.h; sourceTree = "<group>"; };
 		75F2FB21234FC922006007D8 /* BYCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYCalculator.m; sourceTree = "<group>"; };
+		75F2FB23234FF5F4006007D8 /* BYDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYDigitAccumulator.h; sourceTree = "<group>"; };
+		75F2FB24234FF5F4006007D8 /* BYDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDigitAccumulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				75F2FB1E234FC651006007D8 /* BYStack.m */,
 				75F2FB20234FC922006007D8 /* BYCalculator.h */,
 				75F2FB21234FC922006007D8 /* BYCalculator.m */,
+				75F2FB23234FF5F4006007D8 /* BYDigitAccumulator.h */,
+				75F2FB24234FF5F4006007D8 /* BYDigitAccumulator.m */,
 			);
 			path = "PRN Calculator objc";
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				75F2FB03234FC569006007D8 /* SceneDelegate.m in Sources */,
 				75F2FB1F234FC651006007D8 /* BYStack.m in Sources */,
 				75F2FB1C234FC61E006007D8 /* BYCalculatorViewController.m in Sources */,
+				75F2FB25234FF5F4006007D8 /* BYDigitAccumulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
